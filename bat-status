@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Get the battery stats from system info
+chargeNow=`cat /sys/class/power_supply/BAT0/charge_now`
+chargeFull=`cat /sys/class/power_supply/BAT0/charge_full`
+
+# Compute the remaining charge
+percentage=`echo "2 k 100 $chargeNow * $chargeFull / p" | dc`
+
+# Print out the results
+notify-send "Battery percentage: $percentage%"
+
+# TODO Compute a rough hack of time remianing

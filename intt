@@ -1,0 +1,7 @@
+#!/bin/bash
+
+query=`zenity --entry --title='intt' --text='Enter expression to integrate' | sed 's/+/%2b/g'`
+
+if [[ -n $query ]]; then
+  firefox "https://www.wolframalpha.com/input/?i=integral+of+$query"
+fi
