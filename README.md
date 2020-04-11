@@ -25,6 +25,10 @@ Provides a quick way to generate and decode a "ten more logic fibs" word associa
 
 An alias that will rerun the previously typed command with sudo.
 
+# portCheck
+
+A perl program that will display a nice list of what ports are open at an IP that can sometimes catch ports a simple CLI scan doesn't. Also can give an idea of where in the network stack a connection is denied based on how long the port takes to be refused.
+
 
 # qr.py
 
